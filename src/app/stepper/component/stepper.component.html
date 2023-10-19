@@ -1,0 +1,38 @@
+﻿<div class="simple-stepper position-absolute-full">
+    <div id="step-progress-pannel" class="step-progress-pannel">
+
+        <div *ngFor="let step of getSteps()" [id]="step.id" class="step-progress-info fade-in-animation" >
+            <div class="step-icon flex-row-center-center">
+                <div class="step-circle" 
+                [ngClass]="{'active': stepIsCurrent(step) === true, 'disable': stepIsCurrent(step) === false}">
+                </div>
+
+            </div>
+
+            <div class="step-title flex-row-center">
+                <span class="text-overflow">
+                    {{step.title}}
+                </span>
+
+            </div>
+
+            <div class="step-extra-info flex-row-center">
+                <span class="text-overflow">
+                    {{step.additinalText }}
+                </span>
+            </div>
+
+            <div *ngIf="showVerticalLine(step)" class="vertical-line fade-in-animation"></div>
+
+        </div>
+
+    </div>
+
+    <div class="step-content position-relative-full">
+
+        <ng-container [ngTemplateOutlet]="getCurrentStep().content">
+        </ng-container>
+
+    </div>
+
+</div>

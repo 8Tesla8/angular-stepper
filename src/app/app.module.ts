@@ -5,10 +5,14 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ProgressStepperComponent } from './progress-stepper/component/progress-stepper.component';
+import { StepperComponent } from './stepper/component/stepper.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProgressStepperComponent,
+    StepperComponent,
   ],
   imports: [
     BrowserModule,

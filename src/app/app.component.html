@@ -1,0 +1,87 @@
+<!-- <app-progress-stepper #stepper></app-progress-stepper> -->
+<app-stepper #stepper></app-stepper>
+
+<ng-template #step1>
+    <div class="p1">
+        <h4>STEP 1</h4>
+    </div>
+
+    <div class="p1 flex-row-center">
+        <span class="red-round-button m1" (click)="reset()">
+            Reset
+        </span>
+    
+        <span class="green-round-button m1" (click)="goNextStep('step2')">
+            Go step 2
+        </span>
+    </div>
+
+</ng-template>
+
+<ng-template #step2>
+    <div class="p1">
+        <h4>STEP 2</h4>
+    </div>
+
+    <div class="p1 flex-row-center">
+        <span class="red-round-button m1" (click)="reset()">
+            Reset
+        </span>
+    
+        <span class="green-round-button m1" (click)="goNextStep('step3')">
+            Go step 3
+        </span>
+    
+        <span class="green-round-button m1" (click)="goNextStep('step4')">
+            Go step 4
+        </span>
+    </div>
+
+</ng-template>
+
+<ng-template #step3>
+    <div class="p1">
+        <h4>STEP 3</h4>
+    </div>
+
+    <div class="p1 flex-row-center">
+        <span class="red-round-button m1" (click)="reset()">
+            Reset
+        </span>
+    
+        <span class="green-round-button m1" (click)="goNextStep('step4')">
+            Go step 4
+        </span>
+    </div>
+
+</ng-template>
+
+<ng-template #step4>
+    <div class="p1">
+        <h4>STEP 4</h4>
+    </div>
+
+    <div class="p1 flex-row-center">
+        <span class="red-round-button m1" (click)="reset()">
+            Reset
+        </span>
+    
+        <span class="green-round-button m1" (click)="goNextStep('step5')">
+            Go step 5
+        </span>
+    </div>
+
+</ng-template>
+
+<ng-template #step5>
+    <div class="p1">
+        <h4>STEP 5</h4>
+    </div>
+
+    <div class="p1 flex-row-center">
+        <span class="red-round-button m1" (click)="reset()">
+            Reset
+        </span>
+    </div>
+
+</ng-template>
